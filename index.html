@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astra AI Chatbot</title>
+</head>
+<body>
+
+  <h1>Astra AI Chatbot</h1>
+
+  <input
+    type="text"
+    id="message"
+    placeholder="Ask something..."
+  >
+
+  <button onclick="sendMessage()">Send</button>
+
+  <div id="response"></div>
+
+  <script>
+    async function sendMessage() {
+      const message = document.getElementById("message").value;
+      const responseBox = document.getElementById("response");
+
+      if (!message) {
+        responseBox.innerText = "Please enter a message.";
+        return;
+      }
+
+      responseBox.innerText = "Thinking...";
+
+      // API call will be connected securely in the next step.
+      responseBox.innerText =
+        "Your message: " + message;
+    }
+  </script>
+
+</body>
+</html>
